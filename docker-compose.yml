@@ -1,0 +1,20 @@
+version: "3.7"
+
+services:
+  php:
+    depends_on:
+      - mysql
+    build:
+      context: .
+    volumes:
+      - .:/srv
+    working_dir: /srv
+    command: >
+      /bin/sh -c 'composer install && php parallel.php'
+  mysql:
+    image: mysql:5.7
+    environment:
+      - MYSQL_DATABASE=sydphp
+      - MYSQL_PASSWORD=sydphp
+      - MYSQL_ROOT_PASSWORD=sydphp
+      - MYSQL_USER=sydphp

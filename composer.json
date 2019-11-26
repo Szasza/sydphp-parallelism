@@ -1,0 +1,13 @@
+{
+    "require": {
+        "ext-mysqli": "*",
+        "ext-pcntl": "*",
+        "ext-pthreads": "*",
+        "react/dns": "^1.2",
+        "recoil/react": "^1.0",
+        "recoil/recoil": "^1.0"
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
